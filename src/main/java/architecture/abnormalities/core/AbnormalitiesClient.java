@@ -1,4 +1,4 @@
-package architecture.abnormalities;
+package architecture.abnormalities.core;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
