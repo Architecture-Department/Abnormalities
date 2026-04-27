@@ -1,0 +1,12 @@
+{
+	"itemGroup.abnormalities": "Abnormalities Mod Tab",
+	"block.abnormalities.abnormalities_block": "Abnormalities Block",
+	"item.abnormalities.abnormalities_item": "Abnormalities Item",
+	"abnormalities.configuration.title": "Abnormalities Configs",
+	"abnormalities.configuration.section.abnormalities.common.toml": "Abnormalities Configs",
+	"abnormalities.configuration.section.abnormalities.common.toml.title": "Abnormalities Configs",
+	"abnormalities.configuration.items": "Item List",
+	"abnormalities.configuration.logDirtBlock": "Log Dirt Block",
+	"abnormalities.configuration.magicNumberIntroduction": "Magic Number Text",
+	"abnormalities.configuration.magicNumber": "Magic Number"
+}

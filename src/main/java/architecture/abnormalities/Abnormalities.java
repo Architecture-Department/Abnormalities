@@ -1,4 +1,4 @@
-package architecture.example;
+package architecture.abnormalities;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -9,14 +9,14 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(Example.ID)
-public class Example {
+@Mod(Abnormalities.ID)
+public class Abnormalities {
 
-	public static final String ID = "example";
-	public static final String NAME = "Example";
+	public static final String ID = "abnormalities";
+	public static final String NAME = "Abnormalities";
 	public static final Logger LOGGER = LogManager.getLogger(ID);
 
-	public Example(IEventBus modEventBus, ModContainer modContainer) {
+	public Abnormalities(IEventBus modEventBus, ModContainer modContainer) {
 		NeoForge.EVENT_BUS.register(this);
 	}
 
