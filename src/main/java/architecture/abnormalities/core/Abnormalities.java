@@ -31,7 +31,6 @@ public final class Abnormalities {
 		NeoForge.EVENT_BUS.register(this);
 		AbnormalitiesEntityDataSerializers.REGISTRY.register(modEventBus);
 		AbnormalitiesCreativeModeTabs.REGISTRY.register(modEventBus);
-		AbnormalitiesEntityDataSerializers.REGISTRY.register(modEventBus);
 		AbnormalitiesSoundEvents.REGISTRY.register(modEventBus);
 		AbnormalitiesEntityTypes.init(modEventBus);
 		AbnormalitiesSpawnEggItems.REGISTRY.register(modEventBus);
