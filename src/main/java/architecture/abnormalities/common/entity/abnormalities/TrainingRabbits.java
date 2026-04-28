@@ -1,6 +1,7 @@
 package architecture.abnormalities.common.entity.abnormalities;
 
-import architecture.goldenboughs_lib.client.model.entity.ModGeoEntityModel;
+import architecture.abnormalities.core.Abnormalities;
+import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel;
 import architecture.goldenboughs_lib.init.LibAttributes;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
@@ -40,12 +41,12 @@ public class TrainingRabbits extends Mob implements GeoEntity {
 
 	public static class TrainingRabbitsRenderer extends GeoEntityRenderer<TrainingRabbits> {
 		public TrainingRabbitsRenderer(EntityRendererProvider.Context context) {
-			super(context, new ModGeoEntityModel<>("training_rabbits"));
+			super(context, new GeoEntityModel<>(Abnormalities.modRl("training_rabbits")));
 		}
 
 		@Override
 		public @NotNull ResourceLocation getTextureLocation(@NotNull TrainingRabbits animatable) {
-			return ModGeoEntityModel.getTexturePath("training_rabbits");
+			return GeoEntityModel.getTexturePath(Abnormalities.modRl("training_rabbits"));
 		}
 	}
 }

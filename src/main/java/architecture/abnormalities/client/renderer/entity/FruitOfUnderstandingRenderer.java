@@ -1,7 +1,8 @@
 package architecture.abnormalities.client.renderer.entity;
 
 import architecture.abnormalities.common.entity.ordeals.violet.FruitOfUnderstanding;
-import architecture.goldenboughs_lib.client.model.entity.ModGeoEntityModel;
+import architecture.abnormalities.core.Abnormalities;
+import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel;
 import architecture.goldenboughs_lib.client.renderlayer.AutoGlowingRenderLayer;
 import architecture.goldenboughs_lib.util.LibUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -20,7 +21,7 @@ public class FruitOfUnderstandingRenderer extends GeoEntityRenderer<FruitOfUnder
 	protected final Float[] glowmaskValue = {1f};
 
 	public FruitOfUnderstandingRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new ModGeoEntityModel<>("fruit_of_understanding"));
+		super(renderManager, new GeoEntityModel<>(Abnormalities.modRl("fruit_of_understanding")));
 		addRenderLayer(new AutoGlowingRenderLayer<>(this, glowmaskValue));
 	}
 
@@ -34,7 +35,7 @@ public class FruitOfUnderstandingRenderer extends GeoEntityRenderer<FruitOfUnder
 		protected final Float[] glowmaskValue = {1f};
 
 		public FruitBulletRenderer(EntityRendererProvider.Context renderManager) {
-			super(renderManager, new ModGeoEntityModel<>("fruit_bullet"));
+			super(renderManager, new GeoEntityModel<>(Abnormalities.modRl("fruit_bullet")));
 			addRenderLayer(new AutoGlowingRenderLayer<>(this, glowmaskValue));
 		}
 

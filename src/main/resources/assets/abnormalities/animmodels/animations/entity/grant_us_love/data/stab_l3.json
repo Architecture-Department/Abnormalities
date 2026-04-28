@@ -1,0 +1,10 @@
+{
+	"layer": "COMPOSITE_LAYER",
+	"priority": "LOW",
+	"masks": [
+		{
+			"livingmotion": "ALL",
+			"type": "imaginarycraft:grant_us_love_tentacle_l3"
+		}
+	]
+}
