@@ -182,7 +182,10 @@ dependencies {
 	implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:${mixinsquared_version}"))
 
 	// sparkcore 星火
-	implementation jarJar("curse.maven:spark-core-${sparkcore_version}")
+//	implementation jarJar("curse.maven:spark-core-${sparkcore_version}")
+
+	// Kotlin
+//	implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
 
 	// Jade
 	implementation "maven.modrinth:jade:${jade_version}+neoforge"
