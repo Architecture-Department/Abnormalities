@@ -1,8 +1,4 @@
 plugins {
-	id 'java-library'
-	id 'maven-publish'
-	id 'net.neoforged.moddev' version '2.0.141'
-	id 'idea'
 }
 
 var projectName = [
@@ -92,17 +88,15 @@ configurations {
 }
 
 dependencies {
-	if (dev) {
-		projectName.forEach { name ->
-			{
-				implementation jarJar(project(":module:" + name))
-				interfaceInjectionData jarJar(project(":module:" + name))
-			}
+	projectName.forEach { name ->
+		{
+			implementation jarJar(project(":module:" + name))
+			interfaceInjectionData jarJar(project(":module:" + name))
 		}
 	}
 
 	implementation "net.neoforged:neoforge:${neo_version}"
-	localRuntime "org.javassist:javassist:3.30.2-GA"
+	localRuntime "org.javassist:javassist:${javassist_version}"
 
 	// geckolib
 	implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
@@ -114,7 +108,7 @@ dependencies {
 	// sparkcore 星火
 	implementation jarJar("io.github.solarmoonqaq:spark-core:${spark_core_version}")
 	// Kotlin
-	implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
+	implementation "thedarkcolour:kotlinforforge-neoforge:${kotlinforforge_version}"
 
 	// Jade
 	implementation "maven.modrinth:jade:${jade_version}+neoforge"
