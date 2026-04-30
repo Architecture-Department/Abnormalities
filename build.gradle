@@ -7,6 +7,7 @@ plugins {
 
 var projectName = [
 				"GoldenBoughsLib",
+				"ResonatorCombatFramework",
 ]
 
 version = mod_version
@@ -20,82 +21,11 @@ sourceSets.main.resources {
 }
 
 repositories {
-	// Minecraft 官方库（用于 Minecraft 相关依赖）
-	maven { url = "https://libraries.minecraft.net/" }
-
-	// NeoForge 官方发布仓库和元数据仓库（核心依赖源）
-	maven { url = "https://neoforged.forgecdn.net/releases" }
-	maven { url = "https://neoforged.forgecdn.net/mojang-meta" }
-
-	// 本地 Maven 仓库和中央仓库（基础依赖）
 	mavenLocal()
 	mavenCentral()
-
-	// Bawnorton 的 Maven 仓库（MixinSquared 等工具库）
-	maven { url = "https://maven.bawnorton.com/releases" }
-
-	// Enjarai 镜像仓库（部分模组依赖）
-	maven { url = "https://maven.enjarai.dev/mirrors" }
-
-	// JitPack（GitHub 项目打包服务，用于获取未在 Maven Central 发布的库）
-	maven { url = 'https://jitpack.io' }
-
-	// KotlinForForge（Kotlin 语言支持库）
-	maven {
-		name = "Kotlin for Forge"
-		url = "https://thedarkcolour.github.io/KotlinForForge/"
-		content { includeGroup "thedarkcolour" }
-	}
-
-	// Modrinth 模组平台 Maven 仓库（从 Modrinth 下载的模组）
-	maven { url = uri("https://api.modrinth.com/maven") }
-
-	// BlameJared 仓库（JEI、CraftTweaker 等模组）
-	maven { url = uri("https://maven.blamejared.com/") }
-
-	// CurseForge 模组平台 Maven 仓库（从 CurseForge 下载的模组）
-	maven {
-		url = uri("https://www.cursemaven.com")
-		content { includeGroup "curse.maven" }
-	}
-
-	// GeckoLib 动画库仓库（实体动画支持）
-	maven {
-		url = uri("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
-		content { includeGroup("software.bernie.geckolib") }
-	}
-
-	// Kosmx 个人仓库（Emotecraft 等表情模组）
-	maven { url = uri("https://maven.kosmx.dev/") }
-
-	// TheIllusiveC4 仓库（Curios 饰品库作者的个人仓库）
-	maven { url = uri("https://maven.theillusivec4.top/") }
-
-	// RedlanceMinecraft 公共仓库（部分模组依赖）
-	maven {
-		name = "RedlanceMinecraft"
-		url = "https://repo.redlance.org/public"
-	}
-
-	// FirstDark 快照仓库（开发版本依赖）
-	maven { url = "https://maven.firstdark.dev/snapshots" }
-
-	// Latvian Mods 仓库（FTB 系列模组）
-	maven {
-		url "https://maven.latvian.dev/releases"
-		content {
-			includeGroup "dev.latvian.mods"
-			includeGroup "dev.latvian.apps"
-		}
-	}
 }
 
-// If using this mod individually, please set false
-// 如果单独使用该模组，请设置 false
-// Default true. When -Pdev=false, it's for release build.
-// 默认为true。当-Pdev=false时，表示是发布版本。
-// Or if using this mod individually, please use ./gradlew build -Pdev=false
-// 或者如果单独使用这个模组，请使用 .gradlew build -Pdev=false
+// 如果单独使用该模组，请设置 false默认为true。当-Pdev=false时，表示是发布版本。或者如果单独使用这个模组，请使用 .gradlew build -Pdev=false
 boolean dev = project.hasProperty('dev') ? project.property('dev').toBoolean() : true
 
 base {
@@ -182,10 +112,9 @@ dependencies {
 	implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:${mixinsquared_version}"))
 
 	// sparkcore 星火
-//	implementation jarJar("curse.maven:spark-core-${sparkcore_version}")
-
+	implementation jarJar("io.github.solarmoonqaq:spark-core:${spark_core_version}")
 	// Kotlin
-//	implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
+	implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
 
 	// Jade
 	implementation "maven.modrinth:jade:${jade_version}+neoforge"
