@@ -21,8 +21,6 @@ repositories {
 	mavenCentral()
 }
 
-// 如果单独使用该模组，请设置 false默认为true。当-Pdev=false时，表示是发布版本。或者如果单独使用这个模组，请使用 .gradlew build -Pdev=false
-boolean dev = project.hasProperty('dev') ? project.property('dev').toBoolean() : true
 
 base {
 	archivesName = mod_id
