@@ -68,7 +68,13 @@ neoForge {
 							// 忽略无效指令，避免有的人没安装 JetBrain Runtime 无法启动游戏
 							"-XX:+IgnoreUnrecognizedVMOptions",
 							// 启用 JetBrain Runtime 热重载功能
-							"-XX:+AllowEnhancedClassRedefinition"])
+							"-XX:+AllowEnhancedClassRedefinition",
+							// 以下是修复 Kotlin 模块访问权限的参数
+							"--add-reads", "kotlin.stdlib=kotlinx.coroutines.core",
+							"--add-opens", "kotlin.stdlib/kotlin.coroutines.jvm.internal=ALL-UNNAMED",
+							"--add-opens", "kotlinx.coroutines.core/kotlinx.coroutines.debug.internal=ALL-UNNAMED",
+							"-Dkotlinx.coroutines.debug=off" // 关闭 Kotlin 协程调试
+			])
 
 			logLevel = org.slf4j.event.Level.DEBUG
 		}
@@ -94,7 +100,7 @@ dependencies {
 	}
 
 	implementation "net.neoforged:neoforge:${neo_version}"
-	localRuntime "org.javassist:javassist:${javassist_version}"
+	runtimeOnly "org.javassist:javassist:${javassist_version}"
 
 	// geckolib
 	implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
@@ -106,7 +112,7 @@ dependencies {
 	// sparkcore 星火
 	compileOnly "io.github.solarmoonqaq:spark-core:${spark_core_version}"
 //	implementation "curse.maven:spark-core-${maven_spark_core_version}"
-	localRuntime "maven.modrinth:spark-core:${modrinth_spark_core_version}"
+	runtimeOnly "maven.modrinth:spark-core:${modrinth_spark_core_version}"
 
 	// Kotlin
 	implementation "thedarkcolour:kotlinforforge-neoforge:${kotlinforforge_version}"
@@ -117,7 +123,7 @@ dependencies {
 	// JEI
 	compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
 	compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
-	localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+	runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
 	// 试验假人
 	implementation "maven.modrinth:mmmmmmmmmmmm:${mmmmmmmmmmmm_version}"
