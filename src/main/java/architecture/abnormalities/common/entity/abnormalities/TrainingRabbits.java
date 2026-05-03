@@ -46,7 +46,7 @@ public class TrainingRabbits extends Mob implements GeoEntity {
 
 		@Override
 		public @NotNull ResourceLocation getTextureLocation(@NotNull TrainingRabbits animatable) {
-			return GeoEntityModel.getTexturePath(Abnormalities.modRl("training_rabbits"));
+			return GeoEntityModel.texturePath(GeoEntityModel.getPath(Abnormalities.modRl("training_rabbits")));
 		}
 	}
 }
