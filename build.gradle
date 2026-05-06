@@ -89,8 +89,8 @@ configurations {
 dependencies {
 	projectName.forEach { name ->
 		{
-			implementation jarJar(project(":module:" + name))
-			interfaceInjectionData jarJar(project(":module:" + name))
+			implementation project(":module:" + name)
+			interfaceInjectionData project(":module:" + name)
 		}
 	}
 
@@ -120,7 +120,7 @@ dependencies {
 	implementation "maven.modrinth:moonlight:${moonlight_version}"
 
 	compileOnly files(fileTree(dir: "../../libs", include: ["*-sources.jar"]))
-	implementation jarJar(files(fileTree(dir: "../../libs", include: ["*.jar"], exclude: ["*-sources.jar"])))
+	implementation files(fileTree(dir: "../../libs", include: ["*.jar"], exclude: ["*-sources.jar"]))
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
