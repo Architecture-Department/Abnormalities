@@ -119,10 +119,7 @@ dependencies {
 	implementation "maven.modrinth:mmmmmmmmmmmm:${mmmmmmmmmmmm_version}"
 	implementation "maven.modrinth:moonlight:${moonlight_version}"
 
-	// 编译时包含 sources.jar（提供源码和元数据）
 	compileOnly files(fileTree(dir: "../../libs", include: ["*-sources.jar"]))
-
-	// 运行时只包含非-sources的JAR文件
 	implementation jarJar(files(fileTree(dir: "../../libs", include: ["*.jar"], exclude: ["*-sources.jar"])))
 }
 
