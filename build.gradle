@@ -36,6 +36,11 @@ neoForge {
 		minecraftVersion = project.parchment_minecraft_version
 	}
 
+	interfaceInjectionData {
+		from "src/main/resources/META-INF/interfaces.json"
+		publish file("src/main/resources/META-INF/interfaces.json")
+	}
+
 	runs {
 		client {
 			client()
@@ -118,9 +123,6 @@ dependencies {
 	// 试验假人
 	implementation "maven.modrinth:mmmmmmmmmmmm:${mmmmmmmmmmmm_version}"
 	implementation "maven.modrinth:moonlight:${moonlight_version}"
-
-	compileOnly files(fileTree(dir: "../../libs", include: ["*-sources.jar"]))
-	implementation files(fileTree(dir: "../../libs", include: ["*.jar"], exclude: ["*-sources.jar"]))
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
