@@ -209,8 +209,8 @@ public class GrantUsLove extends AbstractGolem implements IOrdealsVioletEntity, 
 	}
 
 	@Override
-	protected Entity.MovementEmission getMovementEmission() {
-		return Entity.MovementEmission.NONE;
+	protected MovementEmission getMovementEmission() {
+		return MovementEmission.NONE;
 	}
 
 	@Override
