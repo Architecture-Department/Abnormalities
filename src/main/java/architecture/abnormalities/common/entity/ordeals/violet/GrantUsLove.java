@@ -298,10 +298,10 @@ public class GrantUsLove extends AbstractGolem implements IOrdealsVioletEntity, 
 			return BTFactory.parallel(ParallelNode.Policy.REQUIRE_ALL, ParallelNode.Policy.REQUIRE_ALL)
 				.addChild(BTFactory.infinite(BTFactory.selector()
 					// 目标不存在
-					.addWithCondition(ConditionBT.not(new TargetExistCondition(this.mob)), BTFactory.sequence())
+					.addWithCondition(ConditionBT.not(new TargetExistCondition(this.getMob())), BTFactory.sequence())
 					// 目标存在
 					.addChild(BTFactory.infinite(BTFactory.sequence()
-						.addChild(new LookAtTargetAction(mob))
+						.addChild(new LookAtTargetAction(getMob()))
 						.addChild(BTFactory.selector())
 					))))
 				// 其他处理例如：技能冷却
