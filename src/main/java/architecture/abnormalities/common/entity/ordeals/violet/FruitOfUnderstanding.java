@@ -5,6 +5,7 @@ import architecture.abnormalities.init.AbnormalitiesSoundEvents;
 import architecture.abnormalities.init.entity.ProjectileEntityTypes;
 import architecture.goldenboughs_lib.api.world.entity.ISpawnByEgg;
 import architecture.goldenboughs_lib.init.LibAttributes;
+import architecture.goldenboughs_lib.init.LibDamageSources;
 import architecture.goldenboughs_lib.init.LibDamageTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -474,7 +475,7 @@ public class FruitOfUnderstanding extends PathfinderMob implements IOrdealsViole
 
 			//noinspection ConstantValue
 			if (shooter instanceof IOrdealsEntity fruit && target != null && !fruit.isCamp(target)) {
-				target.hurt(architecture.goldenboughs_lib.init.LibDamageSources.createDamage(LibDamageTypes.EROSION, this, shooter), BULLET_DAMAGE);
+				target.hurt(LibDamageSources.createDamage(LibDamageTypes.EROSION, this, shooter), BULLET_DAMAGE);
 			}
 
 			discardBullet();
