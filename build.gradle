@@ -106,8 +106,7 @@ dependencies {
 	compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:${mixinsquared_version}"))
 	implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:${mixinsquared_version}"))
 
-	// Kotlin
-	implementation "thedarkcolour:kotlinforforge-neoforge:${kotlinforforge_version}"
+
 
 	// Jade
 	implementation "maven.modrinth:jade:${jade_version}+neoforge"
@@ -157,6 +156,16 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
 	from "src/main/templates"
 	into "build/generated/sources/modMetadata"
 }
+
+sourceSets {
+	main {
+		java {
+			srcDirs += 'src/main/java'
+			srcDirs += 'src/main/kotlin'
+		}
+	}
+}
+
 sourceSets.main.resources.srcDir generateModMetadata
 neoForge.ideSyncTask generateModMetadata
 
