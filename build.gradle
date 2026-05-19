@@ -106,7 +106,7 @@ dependencies {
 	compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:${mixinsquared_version}"))
 	implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:${mixinsquared_version}"))
 
-
+	implementation "maven.modrinth:eyelib:${eyelib_version}"
 
 	// Jade
 	implementation "maven.modrinth:jade:${jade_version}+neoforge"
