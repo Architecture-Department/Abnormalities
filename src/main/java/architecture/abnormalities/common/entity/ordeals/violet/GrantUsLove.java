@@ -92,7 +92,7 @@ public class GrantUsLove extends AbstractGolem implements IOrdealsVioletEntity, 
 //					.removedTick(20 * 2) // 到时间后
 //					.build());
 //
-//			entityEventListener.registerEvent(EpicFightEventHooks.Entity.TAKE_DAMAGE_POST, event -> {
+//			entityEventListener.registerEvent(EpicFightEventHooks.EntityMixin.TAKE_DAMAGE_POST, event -> {
 //				atomicReference.updateAndGet(v -> v + event.getDamage());
 //				if (atomicReference.get() >= INTERRUPT_DAMAGE_PERCENTAGE * getMaxHealth()) {
 //					delayTaskHolder.removeTask(ULTIMATE_SKILL);
