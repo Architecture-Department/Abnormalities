@@ -16,7 +16,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer
 class GrantUsLoveRenderer(renderManager: EntityRendererProvider.Context) :
 	GeoEntityRenderer<GrantUsLove>(renderManager, GeoEntityModel(Abnormalities.modRl("fruit_of_understanding"))) {
 
-	private val glowmaskValue = floatArrayOf(1f)
+	private val glowmaskValue = arrayOf(1f)
 
 	init {
 		addRenderLayer(AutoGlowingRenderLayer(this, glowmaskValue))

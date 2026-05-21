@@ -8,8 +8,8 @@ import net.minecraft.world.entity.player.Player
 
 interface IOrdealsEntity {
 	fun registerGoals() {
-		targetSelector.addGoal(1, NearestAttackableTargetGoal<>(mob, Player::class.java, true) { canTarget(it) })
-		targetSelector.addGoal(2, NearestAttackableTargetGoal<>(mob, Mob::class.java, true) { canTarget(it) })
+		targetSelector.addGoal(1, NearestAttackableTargetGoal(mob, Player::class.java, true) { canTarget(it) })
+		targetSelector.addGoal(2, NearestAttackableTargetGoal(mob, Mob::class.java, true) { canTarget(it) })
 	}
 
 	/**
@@ -30,8 +30,8 @@ interface IOrdealsEntity {
 			return false
 		}
 
-		if (entity is Player player) {
-			return !player.isCreative && !player.isSpectator
+		if (entity is Player) {
+			return !entity.isCreative && !entity.isSpectator
 		}
 
 		return !isCamp(entity)

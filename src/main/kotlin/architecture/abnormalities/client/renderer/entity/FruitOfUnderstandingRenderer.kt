@@ -13,7 +13,7 @@ import net.minecraft.client.renderer.RenderType
 import net.minecraft.client.renderer.entity.EntityRendererProvider
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.phys.Vec3
-import software.bernie.geckolib.cache.object.BakedGeoModel
+import software.bernie.geckolib.cache.`object`.BakedGeoModel
 import software.bernie.geckolib.renderer.GeoEntityRenderer
 import kotlin.math.atan2
 
@@ -23,7 +23,7 @@ class FruitOfUnderstandingRenderer(renderManager: EntityRendererProvider.Context
 		GeoEntityModel(Abnormalities.modRl("fruit_of_understanding"))
 	) {
 
-	private val glowmaskValue = floatArrayOf(1f)
+	private val glowmaskValue = arrayOf(1f)
 
 	init {
 		addRenderLayer(AutoGlowingRenderLayer(this, glowmaskValue))
@@ -49,7 +49,7 @@ class FruitOfUnderstandingRenderer(renderManager: EntityRendererProvider.Context
 			GeoEntityModel(Abnormalities.modRl("fruit_bullet"))
 		) {
 
-		private val glowmaskValue = floatArrayOf(1f)
+		private val glowmaskValue = arrayOf(1f)
 
 		init {
 			addRenderLayer(AutoGlowingRenderLayer(this, glowmaskValue))
@@ -58,23 +58,10 @@ class FruitOfUnderstandingRenderer(renderManager: EntityRendererProvider.Context
 		override fun getRenderType(
 			animatable: FruitOfUnderstanding.FruitBullet,
 			texture: ResourceLocation,
-			bufferSource: MultiBufferSource,
+			bufferSource: MultiBufferSource?,
 			partialTick: Float
-		): RenderType {
+		): RenderType? {
 			return RenderType.entityTranslucentEmissive(texture)
-		}
-
-		override fun defaultRender(
-			poseStack: PoseStack,
-			animatable: FruitOfUnderstanding.FruitBullet,
-			bufferSource: MultiBufferSource,
-			renderType: RenderType?,
-			buffer: VertexConsumer?,
-			yaw: Float,
-			partialTick: Float,
-			packedLight: Int
-		) {
-			super.defaultRender(poseStack, animatable, bufferSource, renderType, buffer, yaw, partialTick, packedLight)
 		}
 
 		override fun preRender(

@@ -11,7 +11,8 @@ import net.neoforged.neoforge.client.model.generators.ItemModelBuilder
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider
 import net.neoforged.neoforge.client.model.generators.ModelFile
 import net.neoforged.neoforge.common.data.ExistingFileHelper
-import net.neoforged.neoforge.registries.DeferredHolder
+import net.neoforged.neoforge.registries.DeferredRegister
+import kotlin.math.min
 
 /**
  * 物品模型数据生成器
@@ -39,13 +40,12 @@ class DatagenItemModel(
 	 * @param pathPrefix 模型路径前缀
 	 */
 	private fun withExistingParent(
-		registry: net.neoforged.neoforge.registries.DeferredRegister.Items,
+		registry: DeferredRegister.Items,
 		pathPrefix: String
 	) {
-		registry.entries.stream().map(DeferredHolder<Item, Item>::getId).forEach { itemId ->
-			IModelBuilder.of(this.withExistingParent(itemId.path, "item/generated"))
-				.goldenboughs_lib$getTexture()
-			.put("layer0", itemId.withPrefix(pathPrefix).toString())
+		registry.entries.stream().map { it.id }.forEach {
+			IModelBuilder.of(this.withExistingParent(it.path, "item/generated"))
+				.`goldenboughs_lib$getTexture`()["layer0"] = it.withPrefix(pathPrefix).toString()
 		}
 	}
 
@@ -88,7 +88,7 @@ class DatagenItemModel(
 			val overrideModelRl = getItemResourceLocation(item, value).withPrefix("item/")
 			modelBuilder.override()
 				.model(ModelFile.UncheckedModelFile(overrideModelRl))
-				.predicate(predicates[Math.min(index, predicates.size - 1)], key)
+				.predicate(predicates[min(index, predicates.size - 1)], key)
 				.end()
 
 			getBuilder(overrideModelRl.toString())

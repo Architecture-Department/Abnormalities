@@ -86,8 +86,7 @@ class GrantUsLove(entityType: EntityType<out GrantUsLove>, level: Level) :
 	}
 
 	override fun registerGoals() {
-		super.registerGoals()
-		(this as IOrdealsVioletEntity).registerGoals()
+		super<IOrdealsVioletEntity>.registerGoals()
 		targetSelector.addGoal(3, createBehaviorTree())
 	}
 

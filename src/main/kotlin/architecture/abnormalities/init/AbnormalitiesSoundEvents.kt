@@ -47,7 +47,7 @@ object AbnormalitiesSoundEvents {
 	)
 
 	private fun registerForHolder(id: String, zhName: String, location: String): DeferredHolder<SoundEvent, SoundEvent> {
-		val register = REGISTRY.register(id) { SoundEvent.createVariableRangeEvent(Abnormalities.modRl(location)) }
+		val register = REGISTRY.register(id) { -> SoundEvent.createVariableRangeEvent(Abnormalities.modRl(location)) }
 		ZhCn.addI18nSoundEventText(zhName, register)
 		return register
 	}

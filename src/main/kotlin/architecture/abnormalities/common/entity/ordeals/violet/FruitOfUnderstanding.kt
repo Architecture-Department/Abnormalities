@@ -124,8 +124,7 @@ class FruitOfUnderstanding(entityType: EntityType<out PathfinderMob>, level: Lev
 	}
 
 	override fun registerGoals() {
-		super.registerGoals()
-		(this as IOrdealsVioletEntity).registerGoals()
+		super<IOrdealsVioletEntity>.registerGoals()
 		this.goalSelector.addGoal(0, FloatGoal(this))
 		this.goalSelector.addGoal(3, FruitOfUnderstandingMeleeAttackGoal())
 		this.goalSelector.addGoal(4, object : RandomStrollGoal(this, 0.6) {
@@ -524,7 +523,7 @@ class FruitOfUnderstanding(entityType: EntityType<out PathfinderMob>, level: Lev
 			if (attackCooldown <= 0) {
 				executeAttack()
 				isWindingUp = false
-				attackCooldown = adjustedTickDelay(getAttackInterval())
+				attackCooldown = adjustedTickDelay(attackInterval)
 			}
 		}
 

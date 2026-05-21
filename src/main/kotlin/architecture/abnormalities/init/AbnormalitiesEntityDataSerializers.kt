@@ -2,7 +2,6 @@ package architecture.abnormalities.init
 
 import architecture.abnormalities.core.Abnormalities
 import architecture.goldenboughs_lib.api.ModByteBufCodecs
-import io.netty.buffer.ByteBuf
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap
 import net.minecraft.core.UUIDUtil
@@ -11,9 +10,7 @@ import net.minecraft.network.syncher.EntityDataSerializer
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 import net.neoforged.neoforge.registries.NeoForgeRegistries
-import java.util.UUID
-import java.util.function.BiFunction
-import java.util.function.IntFunction
+import java.util.*
 
 object AbnormalitiesEntityDataSerializers {
 	@JvmField
@@ -25,11 +22,11 @@ object AbnormalitiesEntityDataSerializers {
 		register(
 			"entity_id",
 			EntityDataSerializer.forValueType(
-				ByteBufCodecs.map<ByteBuf, Int2ObjectMap<MutableMap.MutableEntry<Int, UUID>>, Int, MutableMap.MutableEntry<Int, UUID>>(
-					IntFunction { Int2ObjectOpenHashMap() },
+				ByteBufCodecs.map(
+					{ Int2ObjectOpenHashMap() },
 					ByteBufCodecs.INT,
 					ModByteBufCodecs.entry(
-						BiFunction { k: Int, v: UUID -> java.util.AbstractMap.SimpleEntry(k, v) },
+						{ k, v -> java.util.AbstractMap.SimpleEntry(k, v) },
 						ByteBufCodecs.INT,
 						UUIDUtil.STREAM_CODEC
 					)
@@ -47,6 +44,6 @@ object AbnormalitiesEntityDataSerializers {
 		name: String,
 		serializer: EntityDataSerializer<T>
 	): DeferredHolder<EntityDataSerializer<*>, EntityDataSerializer<T>> {
-		return REGISTRY.register(name) { serializer }
+		return REGISTRY.register(name) { -> serializer }
 	}
 }

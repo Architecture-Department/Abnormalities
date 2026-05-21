@@ -34,7 +34,7 @@ object AbnormalitiesCreativeModeTabs {
 		zhCn: String,
 		builder: (String, String) -> CreativeModeTab.Builder
 	): DeferredHolder<CreativeModeTab, CreativeModeTab> {
-		return REGISTRY.register(name) { builder(name, zhCn).build() }
+		return REGISTRY.register(name) { -> builder(name, zhCn).build() }
 	}
 
 	private fun createCreativeModeTab(

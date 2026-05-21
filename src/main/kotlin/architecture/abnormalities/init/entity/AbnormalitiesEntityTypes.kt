@@ -50,7 +50,7 @@ object AbnormalitiesEntityTypes {
 		lcLevel: LcLevel,
 		sup: Supplier<EntityType<T>>
 	): DeferredHolder<EntityType<*>, EntityType<T>> {
-		val holder = REGISTRY.register<T>(name, sup)
+		val holder = REGISTRY.register(name, sup)
 		LcLevelUtil.lcLevel(lcLevel, holder)
 		ZhCn.addI18nEntityTypeText(zhName, holder)
 		return holder

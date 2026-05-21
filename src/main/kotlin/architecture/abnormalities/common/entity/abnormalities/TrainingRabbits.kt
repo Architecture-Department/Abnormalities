@@ -1,6 +1,7 @@
 package architecture.abnormalities.common.entity.abnormalities
 
 import architecture.abnormalities.core.Abnormalities
+import architecture.goldenboughs_lib.client.model.GeoModelExpand
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.init.LibAttributes
 import net.minecraft.client.renderer.entity.EntityRendererProvider
@@ -37,7 +38,7 @@ class TrainingRabbits(entityType: EntityType<out TrainingRabbits>, level: Level)
 		GeoEntityRenderer<TrainingRabbits>(context, GeoEntityModel(Abnormalities.modRl("training_rabbits"))) {
 
 		override fun getTextureLocation(animatable: TrainingRabbits): ResourceLocation {
-			return GeoEntityModel.texturePath(GeoEntityModel.getPath(Abnormalities.modRl("training_rabbits")))
+			return GeoModelExpand.texturePath(GeoEntityModel.getPath(Abnormalities.modRl("training_rabbits")))
 		}
 	}
 }

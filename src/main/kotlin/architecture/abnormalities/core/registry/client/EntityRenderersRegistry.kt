@@ -16,14 +16,14 @@ import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.client.event.EntityRenderersEvent
 
-@EventBusSubscriber(modid = Abnormalities.ID, value = Dist.CLIENT)
+@EventBusSubscriber(modid = Abnormalities.ID, value = [Dist.CLIENT])
 object EntityRenderersRegistry {
 	@SubscribeEvent
 	fun registry(event: EntityRenderersEvent.RegisterRenderers) {
 		event.registerEntityRenderer(OrdealsEntityTypes.FRUIT_OF_UNDERSTANDING.get(), ::FruitOfUnderstandingRenderer)
 		event.registerEntityRenderer(
 			ProjectileEntityTypes.FRUIT_OF_UNDERSTANDING_BULLET.get(),
-			FruitOfUnderstandingRenderer.FruitBulletRenderer::new
+			FruitOfUnderstandingRenderer::FruitBulletRenderer
 		)
 		event.registerEntityRenderer(OrdealsEntityTypes.GRANT_US_LOVE.get(), ::GrantUsLoveRenderer)
 	}
