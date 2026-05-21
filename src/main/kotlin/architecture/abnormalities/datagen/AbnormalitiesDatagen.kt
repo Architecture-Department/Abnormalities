@@ -14,7 +14,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent
  * 数据生成主类
  */
 @EventBusSubscriber(modid = Abnormalities.ID)
-object Datagen {
+object AbnormalitiesDatagen {
 	@SubscribeEvent
 	fun gatherData(event: GatherDataEvent) {
 		val generator = event.generator
@@ -31,6 +31,4 @@ object Datagen {
 		event.buildClient(ZhCn(output))
 		event.buildClient(DatagenItemModel(output, existingFileHelper))
 	}
-
-
 }
