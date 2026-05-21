@@ -4,7 +4,7 @@ import architecture.abnormalities.common.entity.ordeals.violet.FruitOfUnderstand
 import architecture.abnormalities.core.Abnormalities
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.client.renderlayer.AutoGlowingRenderLayer
-import architecture.goldenboughs_lib.util.LibUtils
+import architecture.goldenboughs_lib.util.calculateSineCycle
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.blaze3d.vertex.VertexConsumer
 import com.mojang.math.Axis
@@ -40,7 +40,7 @@ class FruitOfUnderstandingRenderer(renderManager: EntityRendererProvider.Context
 		packedLight: Int
 	) {
 		super.defaultRender(poseStack, animatable, bufferSource, renderType, buffer, yaw, partialTick, packedLight)
-		this.glowmaskValue[0] = LibUtils.calculateSineCycle(0.8f, 1.2f, 1f)
+		this.glowmaskValue[0] = calculateSineCycle(0.8f, 1.2f, 1f)
 	}
 
 	class FruitBulletRenderer(renderManager: EntityRendererProvider.Context) :

@@ -26,7 +26,7 @@ object AbnormalitiesEntityDataSerializers {
 					{ Int2ObjectOpenHashMap() },
 					ByteBufCodecs.INT,
 					ModByteBufCodecs.entry(
-						{ k, v -> java.util.AbstractMap.SimpleEntry(k, v) },
+						{ k, v -> AbstractMap.SimpleEntry(k, v) },
 						ByteBufCodecs.INT,
 						UUIDUtil.STREAM_CODEC
 					)
