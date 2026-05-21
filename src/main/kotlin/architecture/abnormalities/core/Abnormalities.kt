@@ -20,7 +20,7 @@ import thedarkcolour.kotlinforforge.neoforge.forge.LOADING_CONTEXT
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 
 @Mod(Abnormalities.ID)
-@EventBusSubscriber
+@EventBusSubscriber(modid = Abnormalities.ID)
 object Abnormalities {
 	const val ID: String = "abnormalities"
 	const val NAME: String = "Abnormalities"
