@@ -1,15 +1,12 @@
 package architecture.abnormalities.datagen.tag
 
-import architecture.abnormalities.common.entity.ordeals.IOrdealsEntity
 import architecture.abnormalities.core.Abnormalities
 import architecture.abnormalities.init.entity.OrdealsEntityTypes
 import architecture.abnormalities.init.tag.AbnormalitiesEntityTags
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.EntityTypeTagsProvider
-import net.minecraft.world.entity.EntityType
 import net.neoforged.neoforge.common.data.ExistingFileHelper
-import net.neoforged.neoforge.registries.DeferredHolder
 import java.util.concurrent.CompletableFuture
 
 @Suppress("unchecked_cast")
