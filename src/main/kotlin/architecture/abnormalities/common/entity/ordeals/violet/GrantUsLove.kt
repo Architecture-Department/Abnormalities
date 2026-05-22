@@ -18,7 +18,6 @@ import net.minecraft.network.syncher.EntityDataAccessor
 import net.minecraft.network.syncher.SynchedEntityData
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.damagesource.DamageSource
-import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier
 import net.minecraft.world.entity.ai.attributes.Attributes
@@ -124,10 +123,6 @@ class GrantUsLove(entityType: EntityType<out GrantUsLove>, level: Level) :
 
 	override fun onSpawnByEgg() {
 		// TODO 播放入场动画
-	}
-
-	override fun canTarget(entity: Entity): Boolean {
-		return (this as IOrdealsVioletEntity).canTarget(entity)
 	}
 
 	override fun actuallyHurt(source: DamageSource, damageAmount: Float) {
