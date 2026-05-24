@@ -5,6 +5,7 @@ import architecture.abnormalities.init.AbnormalitiesEntityDataSerializers
 import architecture.abnormalities.init.AbnormalitiesSoundEvents
 import architecture.abnormalities.init.AbnormalitiesSpawnEggItems
 import architecture.abnormalities.init.entity.AbnormalitiesEntityTypes
+import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
@@ -47,7 +48,7 @@ object Abnormalities {
 	@JvmStatic
 	@Contract("_ -> new")
 	fun modRl(name: String): ResourceLocation {
-		return ResourceLocation.fromNamespaceAndPath(ID, name)
+		return rlOf(ID, name)
 	}
 
 	@JvmStatic

@@ -1,6 +1,7 @@
 package architecture.abnormalities.init.tag
 
 import architecture.abnormalities.core.Abnormalities
+import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.core.registries.Registries
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.TagKey
@@ -60,7 +61,7 @@ object AbnormalitiesEntityTags {
 	}
 
 	private fun createCTag(name: String): TagKey<EntityType<*>> {
-		return createTag(ResourceLocation.fromNamespaceAndPath("c", name))
+		return createTag(rlOf("c", name))
 	}
 
 	private fun createMcTag(name: String): TagKey<EntityType<*>> {
