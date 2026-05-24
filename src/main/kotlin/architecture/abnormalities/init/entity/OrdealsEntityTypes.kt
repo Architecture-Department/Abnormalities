@@ -49,7 +49,7 @@ object OrdealsEntityTypes {
 	)
 	//endregion
 
-	fun init(bus: IEventBus) {
+	fun register(bus: IEventBus) {
 		REGISTRY.register(bus)
 	}
 

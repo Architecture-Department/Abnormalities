@@ -31,10 +31,10 @@ object AbnormalitiesEntityTypes {
 			.canSpawnFarFromPlayer()
 	)
 
-	fun init(bus: IEventBus) {
+	fun register(bus: IEventBus) {
 		REGISTRY.register(bus)
-		ProjectileEntityTypes.init(bus)
-		OrdealsEntityTypes.init(bus)
+		ProjectileEntityTypes.register(bus)
+		OrdealsEntityTypes.register(bus)
 	}
 
 	private fun <I : Entity> register(

@@ -36,7 +36,7 @@ object Abnormalities {
 		AbnormalitiesEntityDataSerializers.REGISTRY.register(modBus)
 		AbnormalitiesCreativeModeTabs.REGISTRY.register(modBus)
 		AbnormalitiesSoundEvents.REGISTRY.register(modBus)
-		AbnormalitiesEntityTypes.init(modBus)
+		AbnormalitiesEntityTypes.register(modBus)
 		AbnormalitiesSpawnEggItems.REGISTRY.register(modBus)
 	}
 

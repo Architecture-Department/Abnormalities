@@ -30,7 +30,7 @@ object ProjectileEntityTypes {
 				.updateInterval(10)
 		)
 
-	fun init(bus: IEventBus) {
+	fun register(bus: IEventBus) {
 		REGISTRY.register(bus)
 	}
 
