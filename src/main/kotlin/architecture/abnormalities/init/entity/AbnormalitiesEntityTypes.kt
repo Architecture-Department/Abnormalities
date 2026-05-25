@@ -13,10 +13,11 @@ import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
+import architecture.abnormalities.core.AbnormalitiesConstants
 
 object AbnormalitiesEntityTypes {
 	@JvmField
-	val REGISTRY: DeferredRegister<EntityType<*>> = Abnormalities.modRegister(BuiltInRegistries.ENTITY_TYPE)
+	val REGISTRY: DeferredRegister<EntityType<*>> = AbnormalitiesConstants.modRegister(BuiltInRegistries.ENTITY_TYPE)
 
 	@JvmField
 	val TRAINING_RABBITS: DeferredHolder<EntityType<*>, EntityType<TrainingRabbits>> = register(

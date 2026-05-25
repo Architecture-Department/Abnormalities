@@ -8,13 +8,14 @@ import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.EntityTypeTagsProvider
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import java.util.concurrent.CompletableFuture
+import architecture.abnormalities.core.AbnormalitiesConstants
 
 @Suppress("unchecked_cast")
 class DatagenEntityTag(
 	output: PackOutput,
 	completableFuture: CompletableFuture<HolderLookup.Provider>,
 	existingFileHelper: ExistingFileHelper?
-) : EntityTypeTagsProvider(output, completableFuture, Abnormalities.ID, existingFileHelper) {
+) : EntityTypeTagsProvider(output, completableFuture, AbnormalitiesConstants.ID, existingFileHelper) {
 
 	override fun addTags(provider: HolderLookup.Provider) {
 		tag(AbnormalitiesEntityTags.ORDEALS_VIOLET).add(

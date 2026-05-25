@@ -11,10 +11,14 @@ import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.client.renderer.entity.EntityRendererProvider
 import software.bernie.geckolib.renderer.GeoEntityRenderer
+import architecture.abnormalities.core.AbnormalitiesConstants
 
 // TODO 死亡之后光芒变暗
 class GrantUsLoveRenderer(renderManager: EntityRendererProvider.Context) :
-	GeoEntityRenderer<GrantUsLove>(renderManager, GeoEntityModel(Abnormalities.modRl("fruit_of_understanding"))) {
+	GeoEntityRenderer<GrantUsLove>(
+		renderManager,
+		GeoEntityModel(AbnormalitiesConstants.modRl("fruit_of_understanding"))
+	) {
 
 	private val glowmaskValue = arrayOf(1f)
 

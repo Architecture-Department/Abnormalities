@@ -15,6 +15,7 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.renderer.GeoEntityRenderer
 import software.bernie.geckolib.util.GeckoLibUtil
+import architecture.abnormalities.core.AbnormalitiesConstants
 
 class TrainingRabbits(entityType: EntityType<out TrainingRabbits>, level: Level) : Mob(entityType, level), GeoEntity {
 	private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
@@ -35,10 +36,10 @@ class TrainingRabbits(entityType: EntityType<out TrainingRabbits>, level: Level)
 	}
 
 	class TrainingRabbitsRenderer(context: EntityRendererProvider.Context) :
-		GeoEntityRenderer<TrainingRabbits>(context, GeoEntityModel(Abnormalities.modRl("training_rabbits"))) {
+		GeoEntityRenderer<TrainingRabbits>(context, GeoEntityModel(AbnormalitiesConstants.modRl("training_rabbits"))) {
 
 		override fun getTextureLocation(animatable: TrainingRabbits): ResourceLocation {
-			return GeoModelExpand.texturePath(GeoEntityModel.getPath(Abnormalities.modRl("training_rabbits")))
+			return GeoModelExpand.texturePath(GeoEntityModel.getPath(AbnormalitiesConstants.modRl("training_rabbits")))
 		}
 	}
 }

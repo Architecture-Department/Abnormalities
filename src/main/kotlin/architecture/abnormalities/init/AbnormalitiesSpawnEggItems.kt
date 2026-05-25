@@ -12,10 +12,11 @@ import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
+import architecture.abnormalities.core.AbnormalitiesConstants
 
 object AbnormalitiesSpawnEggItems {
 	@JvmField
-	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(Abnormalities.ID)
+	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(AbnormalitiesConstants.ID)
 
 	@JvmField
 	val GRANT_US_LOVE_SPAWN_EGG: DeferredItem<SpawnEggItem> = register(

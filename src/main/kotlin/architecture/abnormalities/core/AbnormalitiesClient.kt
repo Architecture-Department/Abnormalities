@@ -11,8 +11,8 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory
 import thedarkcolour.kotlinforforge.neoforge.forge.LOADING_CONTEXT
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 
-@Mod(value = Abnormalities.ID, dist = [Dist.CLIENT])
-@EventBusSubscriber(modid = Abnormalities.ID, value = [Dist.CLIENT])
+@Mod(value = AbnormalitiesConstants.ID, dist = [Dist.CLIENT])
+@EventBusSubscriber(modid = AbnormalitiesConstants.ID, value = [Dist.CLIENT])
 object AbnormalitiesClient {
 	init {
 		val modContainer = LOADING_CONTEXT.activeContainer
@@ -26,7 +26,7 @@ object AbnormalitiesClient {
 
 	@SubscribeEvent
 	fun onClientSetup(event: FMLClientSetupEvent) {
-		Abnormalities.LOGGER.info("HELLO FROM CLIENT SETUP")
-		Abnormalities.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().user.name)
+		AbnormalitiesConstants.LOGGER.info("HELLO FROM CLIENT SETUP")
+		AbnormalitiesConstants.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().user.name)
 	}
 }

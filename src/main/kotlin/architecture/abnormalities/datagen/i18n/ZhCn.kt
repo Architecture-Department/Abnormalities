@@ -9,8 +9,9 @@ import net.minecraft.world.entity.EntityType
 import net.minecraft.world.item.Item
 import net.neoforged.fml.loading.FMLEnvironment
 import java.util.function.Supplier
+import architecture.abnormalities.core.AbnormalitiesConstants
 
-class ZhCn(output: PackOutput) : DatagenI18n(output, Abnormalities.ID, "zh_cn") {
+class ZhCn(output: PackOutput) : DatagenI18n(output, AbnormalitiesConstants.ID, "zh_cn") {
 
 	companion object {
 		private val ITEMS: MutableMap<Supplier<out Item>, String> = HashMap()
@@ -44,7 +45,7 @@ class ZhCn(output: PackOutput) : DatagenI18n(output, Abnormalities.ID, "zh_cn") 
 	}
 
 	override fun addTranslations() {
-		addPackDescription(Abnormalities.ID, "异想体")
+		addPackDescription(AbnormalitiesConstants.ID, "异想体")
 		addItemList(ITEMS)
 		addEntityList(ENTITY)
 		addSoundEventList(SOUND_EVENT)

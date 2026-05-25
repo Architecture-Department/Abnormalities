@@ -15,8 +15,9 @@ import net.neoforged.api.distmarker.Dist
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.client.event.EntityRenderersEvent
+import architecture.abnormalities.core.AbnormalitiesConstants
 
-@EventBusSubscriber(modid = Abnormalities.ID, value = [Dist.CLIENT])
+@EventBusSubscriber(modid = AbnormalitiesConstants.ID, value = [Dist.CLIENT])
 object EntityRenderersRegistry {
 	@SubscribeEvent
 	fun registry(event: EntityRenderersEvent.RegisterRenderers) {

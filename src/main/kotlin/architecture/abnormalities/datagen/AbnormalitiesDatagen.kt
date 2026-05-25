@@ -1,6 +1,6 @@
 package architecture.abnormalities.datagen
 
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
 import architecture.abnormalities.datagen.tag.DatagenEntityTag
 import architecture.goldenboughs_lib.util.buildClient
@@ -13,7 +13,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent
 /**
  * 数据生成主类
  */
-@EventBusSubscriber(modid = Abnormalities.ID)
+@EventBusSubscriber(modid = AbnormalitiesConstants.ID)
 object AbnormalitiesDatagen {
 	@SubscribeEvent
 	fun gatherData(event: GatherDataEvent) {

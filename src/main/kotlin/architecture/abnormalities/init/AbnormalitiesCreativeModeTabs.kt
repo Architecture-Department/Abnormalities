@@ -1,6 +1,6 @@
 package architecture.abnormalities.init
 
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.network.chat.Component
@@ -16,7 +16,8 @@ import java.util.function.Supplier
  */
 object AbnormalitiesCreativeModeTabs {
 	@JvmField
-	val REGISTRY: DeferredRegister<CreativeModeTab> = Abnormalities.modRegister(BuiltInRegistries.CREATIVE_MODE_TAB)
+	val REGISTRY: DeferredRegister<CreativeModeTab> =
+		AbnormalitiesConstants.modRegister(BuiltInRegistries.CREATIVE_MODE_TAB)
 
 	@JvmField
 	val SPAWN_EGG: DeferredHolder<CreativeModeTab, CreativeModeTab> = register(
@@ -63,7 +64,7 @@ object AbnormalitiesCreativeModeTabs {
 		zhCn: String,
 		displayItemsGenerator: CreativeModeTab.DisplayItemsGenerator
 	): CreativeModeTab.Builder {
-		val key = "itemGroup.${Abnormalities.ID}.$name"
+		val key = "itemGroup.${AbnormalitiesConstants.ID}.$name"
 		ZhCn.addI18nText(zhCn, key)
 		return CreativeModeTab.builder()
 			.title(Component.translatable(key))

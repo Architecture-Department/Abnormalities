@@ -33,6 +33,7 @@ import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.animation.AnimationController
 import software.bernie.geckolib.animation.PlayState
 import software.bernie.geckolib.util.GeckoLibUtil
+import architecture.abnormalities.core.AbnormalitiesConstants
 
 /**
  * 英文编号:ordeals--violet noon
@@ -55,7 +56,7 @@ class GrantUsLove(entityType: EntityType<out GrantUsLove>, level: Level) :
 
 	companion object {
 		@JvmField
-		val ULTIMATE_SKILL: ResourceLocation = Abnormalities.modRl("ultimate_skill")
+		val ULTIMATE_SKILL: ResourceLocation = AbnormalitiesConstants.modRl("ultimate_skill")
 
 		fun createAttributes(): AttributeSupplier.Builder {
 			return createMobAttributes()

@@ -6,6 +6,7 @@ import architecture.goldenboughs_lib.util.client.DatagenItemModelUtil.withExisti
 import net.minecraft.data.PackOutput
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider
 import net.neoforged.neoforge.common.data.ExistingFileHelper
+import architecture.abnormalities.core.AbnormalitiesConstants
 
 /**
  * 物品模型数据生成器
@@ -14,9 +15,9 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper
 class DatagenItemModel(
 	output: PackOutput,
 	existingFileHelper: ExistingFileHelper
-) : ItemModelProvider(output, Abnormalities.ID, existingFileHelper) {
+) : ItemModelProvider(output, AbnormalitiesConstants.ID, existingFileHelper) {
 
 	override fun registerModels() {
-		withExistingParent(AbnormalitiesSpawnEggItems.REGISTRY, "item/spawn_egg/")
+		withExistingParent("item/spawn_egg/", AbnormalitiesSpawnEggItems.REGISTRY)
 	}
 }

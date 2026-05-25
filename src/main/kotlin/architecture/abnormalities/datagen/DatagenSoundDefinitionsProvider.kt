@@ -8,11 +8,12 @@ import net.minecraft.sounds.SoundEvent
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import net.neoforged.neoforge.common.data.SoundDefinition
 import net.neoforged.neoforge.common.data.SoundDefinitionsProvider
+import architecture.abnormalities.core.AbnormalitiesConstants
 
 class DatagenSoundDefinitionsProvider(
 	output: PackOutput,
 	existingFileHelper: ExistingFileHelper
-) : SoundDefinitionsProvider(output, Abnormalities.ID, existingFileHelper) {
+) : SoundDefinitionsProvider(output, AbnormalitiesConstants.ID, existingFileHelper) {
 
 	companion object {
 		@JvmStatic

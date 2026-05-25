@@ -9,8 +9,9 @@ import architecture.abnormalities.init.entity.OrdealsEntityTypes
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent
+import architecture.abnormalities.core.AbnormalitiesConstants
 
-@EventBusSubscriber(modid = Abnormalities.ID)
+@EventBusSubscriber(modid = AbnormalitiesConstants.ID)
 object EntityAttributeRegistry {
 
 	/**

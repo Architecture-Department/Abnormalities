@@ -16,11 +16,12 @@ import net.minecraft.world.phys.Vec3
 import software.bernie.geckolib.cache.`object`.BakedGeoModel
 import software.bernie.geckolib.renderer.GeoEntityRenderer
 import kotlin.math.atan2
+import architecture.abnormalities.core.AbnormalitiesConstants
 
 class FruitOfUnderstandingRenderer(renderManager: EntityRendererProvider.Context) :
 	GeoEntityRenderer<FruitOfUnderstanding>(
 		renderManager,
-		GeoEntityModel(Abnormalities.modRl("fruit_of_understanding"))
+		GeoEntityModel(AbnormalitiesConstants.modRl("fruit_of_understanding"))
 	) {
 
 	private val glowmaskValue = arrayOf(1f)
@@ -46,7 +47,7 @@ class FruitOfUnderstandingRenderer(renderManager: EntityRendererProvider.Context
 	class FruitBulletRenderer(renderManager: EntityRendererProvider.Context) :
 		GeoEntityRenderer<FruitOfUnderstanding.FruitBullet>(
 			renderManager,
-			GeoEntityModel(Abnormalities.modRl("fruit_bullet"))
+			GeoEntityModel(AbnormalitiesConstants.modRl("fruit_bullet"))
 		) {
 
 		private val glowmaskValue = arrayOf(1f)
