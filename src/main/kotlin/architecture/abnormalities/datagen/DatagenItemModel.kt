@@ -2,7 +2,7 @@ package architecture.abnormalities.datagen
 
 import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.AbnormalitiesSpawnEggItems
-import architecture.goldenboughs_lib.util.client.DatagenItemModelUtil.withExistingParent
+import architecture.goldenboughs_lib.util.datagen.ItemModelUtil.withExistingParent
 import net.minecraft.data.PackOutput
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider
 import net.neoforged.neoforge.common.data.ExistingFileHelper

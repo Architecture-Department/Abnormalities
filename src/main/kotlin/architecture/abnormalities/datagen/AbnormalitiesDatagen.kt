@@ -3,8 +3,8 @@ package architecture.abnormalities.datagen
 import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
 import architecture.abnormalities.datagen.tag.DatagenEntityTag
-import architecture.goldenboughs_lib.util.buildClient
-import architecture.goldenboughs_lib.util.buildServer
+import architecture.goldenboughs_lib.util.datagen.buildClient
+import architecture.goldenboughs_lib.util.datagen.buildServer
 import net.minecraft.core.RegistrySetBuilder
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
