@@ -1,4 +1,4 @@
-package architecture.abnormalities.core.registry
+package architecture.abnormalities.events.registry
 
 import architecture.abnormalities.common.entity.abnormalities.TrainingRabbits
 import architecture.abnormalities.common.entity.ordeals.violet.FruitOfUnderstanding

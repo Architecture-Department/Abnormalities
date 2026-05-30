@@ -1,4 +1,4 @@
-package architecture.abnormalities.core.registry.client
+package architecture.abnormalities.events.registry.client
 
 import architecture.abnormalities.client.renderer.entity.FruitOfUnderstandingRenderer
 import architecture.abnormalities.client.renderer.entity.GrantUsLoveRenderer
