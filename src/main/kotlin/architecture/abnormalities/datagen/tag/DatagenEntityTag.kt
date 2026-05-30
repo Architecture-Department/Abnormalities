@@ -1,6 +1,6 @@
 package architecture.abnormalities.datagen.tag
 
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.entity.OrdealsEntityTypes
 import architecture.abnormalities.init.tag.AbnormalitiesEntityTags
 import net.minecraft.core.HolderLookup
@@ -8,7 +8,6 @@ import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.EntityTypeTagsProvider
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import java.util.concurrent.CompletableFuture
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 @Suppress("unchecked_cast")
 class DatagenEntityTag(

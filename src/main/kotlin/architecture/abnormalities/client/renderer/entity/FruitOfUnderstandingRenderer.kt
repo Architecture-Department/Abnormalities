@@ -1,7 +1,7 @@
 package architecture.abnormalities.client.renderer.entity
 
 import architecture.abnormalities.common.entity.ordeals.violet.FruitOfUnderstanding
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.client.renderlayer.AutoGlowingRenderLayer
 import architecture.goldenboughs_lib.util.calculateSineCycle
@@ -16,7 +16,6 @@ import net.minecraft.world.phys.Vec3
 import software.bernie.geckolib.cache.`object`.BakedGeoModel
 import software.bernie.geckolib.renderer.GeoEntityRenderer
 import kotlin.math.atan2
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 class FruitOfUnderstandingRenderer(renderManager: EntityRendererProvider.Context) :
 	GeoEntityRenderer<FruitOfUnderstanding>(

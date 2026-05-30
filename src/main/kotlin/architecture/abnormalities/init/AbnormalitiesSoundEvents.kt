@@ -1,12 +1,11 @@
 package architecture.abnormalities.init
 
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.sounds.SoundEvent
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 object AbnormalitiesSoundEvents {
 	@JvmField

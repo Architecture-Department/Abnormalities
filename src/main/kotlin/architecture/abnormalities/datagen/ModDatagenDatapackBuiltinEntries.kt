@@ -1,12 +1,11 @@
 package architecture.abnormalities.datagen
 
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import net.minecraft.core.HolderLookup
 import net.minecraft.core.RegistrySetBuilder
 import net.minecraft.data.PackOutput
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider
 import java.util.concurrent.CompletableFuture
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 /**
  * 创建一个数据包内置条目

@@ -1,7 +1,7 @@
 package architecture.abnormalities.init.entity
 
 import architecture.abnormalities.common.entity.ordeals.violet.FruitOfUnderstanding
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
 import architecture.goldenboughs_lib.api.LcLevel
 import architecture.goldenboughs_lib.util.LcLevelUtil
@@ -13,7 +13,6 @@ import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 object ProjectileEntityTypes {
 	@JvmField

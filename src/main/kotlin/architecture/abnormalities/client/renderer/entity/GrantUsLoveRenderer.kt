@@ -1,7 +1,7 @@
 package architecture.abnormalities.client.renderer.entity
 
 import architecture.abnormalities.common.entity.ordeals.violet.GrantUsLove
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.client.renderlayer.AutoGlowingRenderLayer
 import architecture.goldenboughs_lib.util.calculateSineCycle
@@ -11,7 +11,6 @@ import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.client.renderer.entity.EntityRendererProvider
 import software.bernie.geckolib.renderer.GeoEntityRenderer
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 // TODO 死亡之后光芒变暗
 class GrantUsLoveRenderer(renderManager: EntityRendererProvider.Context) :

@@ -1,6 +1,6 @@
 package architecture.abnormalities.datagen
 
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.AbnormalitiesSoundEvents
 import net.minecraft.data.PackOutput
 import net.minecraft.resources.ResourceLocation
@@ -8,7 +8,6 @@ import net.minecraft.sounds.SoundEvent
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import net.neoforged.neoforge.common.data.SoundDefinition
 import net.neoforged.neoforge.common.data.SoundDefinitionsProvider
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 class DatagenSoundDefinitionsProvider(
 	output: PackOutput,

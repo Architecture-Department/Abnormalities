@@ -1,6 +1,6 @@
 package architecture.abnormalities.common.entity.ordeals.violet
 
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.AbnormalitiesSoundEvents
 import architecture.goldenboughs_lib.api.world.entity.IBehaviorTreeMob
 import architecture.goldenboughs_lib.api.world.entity.ISkillExpand
@@ -33,7 +33,6 @@ import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.animation.AnimationController
 import software.bernie.geckolib.animation.PlayState
 import software.bernie.geckolib.util.GeckoLibUtil
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 /**
  * 英文编号:ordeals--violet noon

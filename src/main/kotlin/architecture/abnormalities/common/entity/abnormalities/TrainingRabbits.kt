@@ -1,6 +1,6 @@
 package architecture.abnormalities.common.entity.abnormalities
 
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.goldenboughs_lib.client.model.GeoModelExpand
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.init.LibAttributes
@@ -15,7 +15,6 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.animation.AnimatableManager
 import software.bernie.geckolib.renderer.GeoEntityRenderer
 import software.bernie.geckolib.util.GeckoLibUtil
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 class TrainingRabbits(entityType: EntityType<out TrainingRabbits>, level: Level) : Mob(entityType, level), GeoEntity {
 	private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)

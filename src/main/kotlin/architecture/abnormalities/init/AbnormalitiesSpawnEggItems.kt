@@ -1,7 +1,7 @@
 package architecture.abnormalities.init
 
 import architecture.abnormalities.common.item.ModEggItem
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
 import architecture.abnormalities.init.entity.OrdealsEntityTypes
 import net.minecraft.world.entity.EntityType
@@ -12,7 +12,6 @@ import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 object AbnormalitiesSpawnEggItems {
 	@JvmField

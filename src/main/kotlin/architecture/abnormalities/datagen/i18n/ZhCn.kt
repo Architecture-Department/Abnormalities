@@ -1,6 +1,6 @@
 package architecture.abnormalities.datagen.i18n
 
-import architecture.abnormalities.core.Abnormalities
+import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.tag.AbnormalitiesEntityTags
 import architecture.goldenboughs_lib.datagen.i18n.DatagenI18n
 import net.minecraft.data.PackOutput
@@ -9,7 +9,6 @@ import net.minecraft.world.entity.EntityType
 import net.minecraft.world.item.Item
 import net.neoforged.fml.loading.FMLEnvironment
 import java.util.function.Supplier
-import architecture.abnormalities.core.AbnormalitiesConstants
 
 class ZhCn(output: PackOutput) : DatagenI18n(output, AbnormalitiesConstants.ID, "zh_cn") {
 
