@@ -1,11 +1,11 @@
-package architecture.abnormalities.init.entity
+﻿package architecture.abnormalities.init.entity
 
 import architecture.abnormalities.common.entity.ordeals.violet.FruitOfUnderstanding
 import architecture.abnormalities.common.entity.ordeals.violet.GrantUsLove
 import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
-import architecture.goldenboughs_lib.api.LcLevel
-import architecture.goldenboughs_lib.util.LcLevelUtil
+import architecture.goldenboughs_lib.module.lc_damage.api.LcLevel
+import architecture.goldenboughs_lib.module.lc_damage.util.LcLevelUtil
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
