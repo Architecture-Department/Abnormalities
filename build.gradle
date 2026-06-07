@@ -12,4 +12,5 @@ dependencies {
 	addJEI()
 	addDummyMobs()
 	addLocalLibs()
+	addParticleStorm()
 }
