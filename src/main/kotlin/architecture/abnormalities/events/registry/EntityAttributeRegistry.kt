@@ -3,14 +3,14 @@ package architecture.abnormalities.events.registry
 import architecture.abnormalities.common.entity.abnormalities.TrainingRabbits
 import architecture.abnormalities.common.entity.ordeals.violet.FruitOfUnderstanding
 import architecture.abnormalities.common.entity.ordeals.violet.GrantUsLove
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.entity.AbnormalitiesEntityTypes
 import architecture.abnormalities.init.entity.OrdealsEntityTypes
+import architecture.abnormalities.util.AbnormalitiesUtil
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent
 
-@EventBusSubscriber(modid = AbnormalitiesConstants.ID)
+@EventBusSubscriber(modid = AbnormalitiesUtil.ID)
 object EntityAttributeRegistry {
 
 	/**

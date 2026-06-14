@@ -1,6 +1,6 @@
 package architecture.abnormalities.datagen
 
-import architecture.abnormalities.core.AbnormalitiesConstants
+import architecture.abnormalities.util.AbnormalitiesUtil
 import net.minecraft.core.HolderLookup
 import net.minecraft.core.RegistrySetBuilder
 import net.minecraft.data.PackOutput
@@ -14,4 +14,4 @@ class ModDatagenDatapackBuiltinEntries(
 	output: PackOutput,
 	registries: CompletableFuture<HolderLookup.Provider>,
 	datapackEntriesBuilder: RegistrySetBuilder
-) : DatapackBuiltinEntriesProvider(output, registries, datapackEntriesBuilder, setOf(AbnormalitiesConstants.ID))
+) : DatapackBuiltinEntriesProvider(output, registries, datapackEntriesBuilder, setOf(AbnormalitiesUtil.ID))

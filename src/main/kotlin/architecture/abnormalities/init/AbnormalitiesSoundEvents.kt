@@ -1,7 +1,7 @@
 package architecture.abnormalities.init
 
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
+import architecture.abnormalities.util.AbnormalitiesUtil
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.sounds.SoundEvent
 import net.neoforged.neoforge.registries.DeferredHolder
@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister
 
 object AbnormalitiesSoundEvents {
 	@JvmField
-	val REGISTRY: DeferredRegister<SoundEvent> = AbnormalitiesConstants.modRegister(BuiltInRegistries.SOUND_EVENT)
+	val REGISTRY: DeferredRegister<SoundEvent> = AbnormalitiesUtil.modRegister(BuiltInRegistries.SOUND_EVENT)
 
 	@JvmField
 	val VIOLET_NOON_DOWN: DeferredHolder<SoundEvent, SoundEvent> = registerForHolder(
@@ -48,7 +48,7 @@ object AbnormalitiesSoundEvents {
 
 	private fun registerForHolder(id: String, zhName: String, location: String): DeferredHolder<SoundEvent, SoundEvent> {
 		val register =
-			REGISTRY.register(id) { -> SoundEvent.createVariableRangeEvent(AbnormalitiesConstants.modRl(location)) }
+			REGISTRY.register(id) { -> SoundEvent.createVariableRangeEvent(AbnormalitiesUtil.modRl(location)) }
 		ZhCn.addI18nSoundEventText(zhName, register)
 		return register
 	}

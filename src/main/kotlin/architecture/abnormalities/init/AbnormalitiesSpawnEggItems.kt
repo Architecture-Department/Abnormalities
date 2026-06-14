@@ -1,9 +1,9 @@
 package architecture.abnormalities.init
 
 import architecture.abnormalities.common.item.ModEggItem
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
 import architecture.abnormalities.init.entity.OrdealsEntityTypes
+import architecture.abnormalities.util.AbnormalitiesUtil
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.entity.Mob
 import net.minecraft.world.item.Item
@@ -15,7 +15,7 @@ import java.util.function.Supplier
 
 object AbnormalitiesSpawnEggItems {
 	@JvmField
-	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(AbnormalitiesConstants.ID)
+	val REGISTRY: DeferredRegister.Items = DeferredRegister.createItems(AbnormalitiesUtil.ID)
 
 	@JvmField
 	val GRANT_US_LOVE_SPAWN_EGG: DeferredItem<SpawnEggItem> = register(

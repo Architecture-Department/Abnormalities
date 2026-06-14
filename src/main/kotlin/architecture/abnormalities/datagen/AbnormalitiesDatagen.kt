@@ -1,8 +1,8 @@
 package architecture.abnormalities.datagen
 
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
 import architecture.abnormalities.datagen.tag.DatagenEntityTag
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.util.datagen.buildClient
 import architecture.goldenboughs_lib.util.datagen.buildServer
 import net.minecraft.core.RegistrySetBuilder
@@ -13,7 +13,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent
 /**
  * 数据生成主类
  */
-@EventBusSubscriber(modid = AbnormalitiesConstants.ID)
+@EventBusSubscriber(modid = AbnormalitiesUtil.ID)
 object AbnormalitiesDatagen {
 	@SubscribeEvent
 	fun gatherData(event: GatherDataEvent) {

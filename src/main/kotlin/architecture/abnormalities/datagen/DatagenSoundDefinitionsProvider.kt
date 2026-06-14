@@ -1,7 +1,7 @@
 package architecture.abnormalities.datagen
 
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.AbnormalitiesSoundEvents
+import architecture.abnormalities.util.AbnormalitiesUtil
 import net.minecraft.data.PackOutput
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.sounds.SoundEvent
@@ -12,7 +12,7 @@ import net.neoforged.neoforge.common.data.SoundDefinitionsProvider
 class DatagenSoundDefinitionsProvider(
 	output: PackOutput,
 	existingFileHelper: ExistingFileHelper
-) : SoundDefinitionsProvider(output, AbnormalitiesConstants.ID, existingFileHelper) {
+) : SoundDefinitionsProvider(output, AbnormalitiesUtil.ID, existingFileHelper) {
 
 	companion object {
 		@JvmStatic

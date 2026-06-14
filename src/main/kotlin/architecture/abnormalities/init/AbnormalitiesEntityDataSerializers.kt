@@ -1,6 +1,6 @@
 package architecture.abnormalities.init
 
-import architecture.abnormalities.core.AbnormalitiesConstants
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.api.ModByteBufCodecs
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap
@@ -15,7 +15,7 @@ import java.util.*
 object AbnormalitiesEntityDataSerializers {
 	@JvmField
 	val REGISTRY: DeferredRegister<EntityDataSerializer<*>> =
-		AbnormalitiesConstants.modRegister(NeoForgeRegistries.Keys.ENTITY_DATA_SERIALIZERS)
+		AbnormalitiesUtil.modRegister(NeoForgeRegistries.Keys.ENTITY_DATA_SERIALIZERS)
 
 	@JvmField
 	val ENTITY_ID: DeferredHolder<EntityDataSerializer<*>, EntityDataSerializer<Int2ObjectMap<Map.Entry<Int, UUID>>>> =

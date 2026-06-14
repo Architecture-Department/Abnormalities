@@ -1,7 +1,7 @@
 package architecture.abnormalities.datagen.i18n
 
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.tag.AbnormalitiesEntityTags
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.datagen.i18n.DatagenI18n
 import net.minecraft.data.PackOutput
 import net.minecraft.sounds.SoundEvent
@@ -10,7 +10,7 @@ import net.minecraft.world.item.Item
 import net.neoforged.fml.loading.FMLEnvironment
 import java.util.function.Supplier
 
-class ZhCn(output: PackOutput) : DatagenI18n(output, AbnormalitiesConstants.ID, "zh_cn") {
+class ZhCn(output: PackOutput) : DatagenI18n(output, AbnormalitiesUtil.ID, "zh_cn") {
 
 	companion object {
 		private val ITEMS: MutableMap<Supplier<out Item>, String> = HashMap()
@@ -44,7 +44,7 @@ class ZhCn(output: PackOutput) : DatagenI18n(output, AbnormalitiesConstants.ID, 
 	}
 
 	override fun addTranslations() {
-		addPackDescription(AbnormalitiesConstants.ID, "异想体")
+		addPackDescription(AbnormalitiesUtil.ID, "异想体")
 		addItemList(ITEMS)
 		addEntityList(ENTITY)
 		addSoundEventList(SOUND_EVENT)

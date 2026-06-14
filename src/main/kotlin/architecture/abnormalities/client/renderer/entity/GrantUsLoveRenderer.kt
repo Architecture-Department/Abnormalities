@@ -1,7 +1,7 @@
 package architecture.abnormalities.client.renderer.entity
 
 import architecture.abnormalities.common.entity.ordeals.violet.GrantUsLove
-import architecture.abnormalities.core.AbnormalitiesConstants
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.client.renderlayer.AutoGlowingRenderLayer
 import architecture.goldenboughs_lib.util.calculateSineCycle
@@ -16,7 +16,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer
 class GrantUsLoveRenderer(renderManager: EntityRendererProvider.Context) :
 	GeoEntityRenderer<GrantUsLove>(
 		renderManager,
-		GeoEntityModel(AbnormalitiesConstants.modRl("fruit_of_understanding"))
+		GeoEntityModel(AbnormalitiesUtil.modRl("fruit_of_understanding"))
 	) {
 
 	private val glowmaskValue = arrayOf(1f)

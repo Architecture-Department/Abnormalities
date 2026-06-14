@@ -1,11 +1,12 @@
 package architecture.abnormalities.core
 
-import architecture.abnormalities.core.AbnormalitiesConstants.LOGGER
 import architecture.abnormalities.init.AbnormalitiesCreativeModeTabs
 import architecture.abnormalities.init.AbnormalitiesEntityDataSerializers
 import architecture.abnormalities.init.AbnormalitiesSoundEvents
 import architecture.abnormalities.init.AbnormalitiesSpawnEggItems
 import architecture.abnormalities.init.entity.AbnormalitiesEntityTypes
+import architecture.abnormalities.util.AbnormalitiesUtil
+import architecture.abnormalities.util.AbnormalitiesUtil.LOGGER
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
@@ -13,8 +14,8 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent
 import thedarkcolour.kotlinforforge.neoforge.forge.LOADING_CONTEXT
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 
-@Mod(AbnormalitiesConstants.ID)
-@EventBusSubscriber(modid = AbnormalitiesConstants.ID)
+@Mod(AbnormalitiesUtil.ID)
+@EventBusSubscriber(modid = AbnormalitiesUtil.ID)
 object Abnormalities {
 	@SubscribeEvent
 	fun onServerStarting(event: ServerStartingEvent) {

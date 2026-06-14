@@ -1,6 +1,6 @@
 package architecture.abnormalities.common.entity.abnormalities
 
-import architecture.abnormalities.core.AbnormalitiesConstants
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.client.model.GeoModelExpand
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.init.LibAttributes
@@ -35,10 +35,10 @@ class TrainingRabbits(entityType: EntityType<out TrainingRabbits>, level: Level)
 	}
 
 	class TrainingRabbitsRenderer(context: EntityRendererProvider.Context) :
-		GeoEntityRenderer<TrainingRabbits>(context, GeoEntityModel(AbnormalitiesConstants.modRl("training_rabbits"))) {
+		GeoEntityRenderer<TrainingRabbits>(context, GeoEntityModel(AbnormalitiesUtil.modRl("training_rabbits"))) {
 
 		override fun getTextureLocation(animatable: TrainingRabbits): ResourceLocation {
-			return GeoModelExpand.texturePath(GeoEntityModel.getPath(AbnormalitiesConstants.modRl("training_rabbits")))
+			return GeoModelExpand.texturePath(GeoEntityModel.getPath(AbnormalitiesUtil.modRl("training_rabbits")))
 		}
 	}
 }

@@ -1,6 +1,6 @@
-package architecture.abnormalities.core
+package architecture.abnormalities.util
 
-import architecture.goldenboughs_lib.util.LibUtil.rlOf
+import architecture.goldenboughs_lib.util.LibUtil
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
@@ -9,7 +9,7 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import org.jetbrains.annotations.Contract
 
-object AbnormalitiesConstants {
+object AbnormalitiesUtil {
 	const val ID: String = "abnormalities"
 	const val NAME: String = "Abnormalities"
 
@@ -19,7 +19,7 @@ object AbnormalitiesConstants {
 	@JvmStatic
 	@Contract("_ -> new")
 	fun modRl(name: String): ResourceLocation {
-		return rlOf(ID, name)
+		return LibUtil.rlOf(ID, name)
 	}
 
 	@JvmStatic

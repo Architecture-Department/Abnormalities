@@ -1,6 +1,6 @@
 package architecture.abnormalities.init.tag
 
-import architecture.abnormalities.core.AbnormalitiesConstants
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.util.LibUtil.rlOf
 import net.minecraft.core.registries.Registries
 import net.minecraft.resources.ResourceLocation
@@ -53,7 +53,7 @@ object AbnormalitiesEntityTags {
 	val THE_SWEEPERS: TagKey<EntityType<*>> = createTag("the_sweepers")
 
 	private fun createTag(name: String): TagKey<EntityType<*>> {
-		return createTag(AbnormalitiesConstants.modRl(name))
+		return createTag(AbnormalitiesUtil.modRl(name))
 	}
 
 	private fun createTag(location: ResourceLocation): TagKey<EntityType<*>> {

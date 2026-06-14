@@ -1,7 +1,7 @@
 package architecture.abnormalities.datagen
 
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.AbnormalitiesSpawnEggItems
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.util.datagen.ItemModelUtil.withExistingParent
 import net.minecraft.data.PackOutput
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider
@@ -14,7 +14,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper
 class DatagenItemModel(
 	output: PackOutput,
 	existingFileHelper: ExistingFileHelper
-) : ItemModelProvider(output, AbnormalitiesConstants.ID, existingFileHelper) {
+) : ItemModelProvider(output, AbnormalitiesUtil.ID, existingFileHelper) {
 
 	override fun registerModels() {
 		withExistingParent(pathPrefix = "item/spawn_egg/", registry = AbnormalitiesSpawnEggItems.REGISTRY)

@@ -1,8 +1,8 @@
 package architecture.abnormalities.datagen.tag
 
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.entity.OrdealsEntityTypes
 import architecture.abnormalities.init.tag.AbnormalitiesEntityTags
+import architecture.abnormalities.util.AbnormalitiesUtil
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.EntityTypeTagsProvider
@@ -14,7 +14,7 @@ class DatagenEntityTag(
 	output: PackOutput,
 	completableFuture: CompletableFuture<HolderLookup.Provider>,
 	existingFileHelper: ExistingFileHelper?
-) : EntityTypeTagsProvider(output, completableFuture, AbnormalitiesConstants.ID, existingFileHelper) {
+) : EntityTypeTagsProvider(output, completableFuture, AbnormalitiesUtil.ID, existingFileHelper) {
 
 	override fun addTags(provider: HolderLookup.Provider) {
 		tag(AbnormalitiesEntityTags.ORDEALS_VIOLET).add(

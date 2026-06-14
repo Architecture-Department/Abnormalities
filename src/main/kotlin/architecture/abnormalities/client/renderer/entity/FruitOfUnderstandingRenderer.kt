@@ -1,7 +1,7 @@
 package architecture.abnormalities.client.renderer.entity
 
 import architecture.abnormalities.common.entity.ordeals.violet.FruitOfUnderstanding
-import architecture.abnormalities.core.AbnormalitiesConstants
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.client.model.entity.GeoEntityModel
 import architecture.goldenboughs_lib.client.renderlayer.AutoGlowingRenderLayer
 import architecture.goldenboughs_lib.util.calculateSineCycle
@@ -20,7 +20,7 @@ import kotlin.math.atan2
 class FruitOfUnderstandingRenderer(renderManager: EntityRendererProvider.Context) :
 	GeoEntityRenderer<FruitOfUnderstanding>(
 		renderManager,
-		GeoEntityModel(AbnormalitiesConstants.modRl("fruit_of_understanding"))
+		GeoEntityModel(AbnormalitiesUtil.modRl("fruit_of_understanding"))
 	) {
 
 	private val glowmaskValue = arrayOf(1f)
@@ -46,7 +46,7 @@ class FruitOfUnderstandingRenderer(renderManager: EntityRendererProvider.Context
 	class FruitBulletRenderer(renderManager: EntityRendererProvider.Context) :
 		GeoEntityRenderer<FruitOfUnderstanding.FruitBullet>(
 			renderManager,
-			GeoEntityModel(AbnormalitiesConstants.modRl("fruit_bullet"))
+			GeoEntityModel(AbnormalitiesUtil.modRl("fruit_bullet"))
 		) {
 
 		private val glowmaskValue = arrayOf(1f)

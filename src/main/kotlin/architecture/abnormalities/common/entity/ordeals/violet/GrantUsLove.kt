@@ -1,7 +1,7 @@
 package architecture.abnormalities.common.entity.ordeals.violet
 
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.AbnormalitiesSoundEvents
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.api.world.entity.IBehaviorTreeMob
 import architecture.goldenboughs_lib.api.world.entity.ISkillExpand
 import architecture.goldenboughs_lib.api.world.entity.ISpawnByEgg
@@ -55,7 +55,7 @@ class GrantUsLove(entityType: EntityType<out GrantUsLove>, level: Level) :
 
 	companion object {
 		@JvmField
-		val ULTIMATE_SKILL: ResourceLocation = AbnormalitiesConstants.modRl("ultimate_skill")
+		val ULTIMATE_SKILL: ResourceLocation = AbnormalitiesUtil.modRl("ultimate_skill")
 
 		fun createAttributes(): AttributeSupplier.Builder {
 			return createMobAttributes()

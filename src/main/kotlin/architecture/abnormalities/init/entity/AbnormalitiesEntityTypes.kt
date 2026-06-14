@@ -1,8 +1,8 @@
 ﻿package architecture.abnormalities.init.entity
 
 import architecture.abnormalities.common.entity.abnormalities.TrainingRabbits
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.datagen.i18n.ZhCn
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.module.lc_damage.api.LcLevel
 import architecture.goldenboughs_lib.module.lc_damage.util.LcLevelUtil
 import net.minecraft.core.registries.BuiltInRegistries
@@ -16,7 +16,7 @@ import java.util.function.Supplier
 
 object AbnormalitiesEntityTypes {
 	@JvmField
-	val REGISTRY: DeferredRegister<EntityType<*>> = AbnormalitiesConstants.modRegister(BuiltInRegistries.ENTITY_TYPE)
+	val REGISTRY: DeferredRegister<EntityType<*>> = AbnormalitiesUtil.modRegister(BuiltInRegistries.ENTITY_TYPE)
 
 	@JvmField
 	val TRAINING_RABBITS: DeferredHolder<EntityType<*>, EntityType<TrainingRabbits>> = register(

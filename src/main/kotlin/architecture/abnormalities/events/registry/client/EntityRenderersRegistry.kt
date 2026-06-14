@@ -2,9 +2,9 @@ package architecture.abnormalities.events.registry.client
 
 import architecture.abnormalities.client.renderer.entity.FruitOfUnderstandingRenderer
 import architecture.abnormalities.client.renderer.entity.GrantUsLoveRenderer
-import architecture.abnormalities.core.AbnormalitiesConstants
 import architecture.abnormalities.init.entity.OrdealsEntityTypes
 import architecture.abnormalities.init.entity.ProjectileEntityTypes
+import architecture.abnormalities.util.AbnormalitiesUtil
 import architecture.goldenboughs_lib.client.renderer.EmptyLivingEntityRenderer
 import architecture.goldenboughs_lib.client.renderer.EmptyMobRenderer
 import net.minecraft.resources.ResourceLocation
@@ -16,7 +16,7 @@ import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.client.event.EntityRenderersEvent
 
-@EventBusSubscriber(modid = AbnormalitiesConstants.ID, value = [Dist.CLIENT])
+@EventBusSubscriber(modid = AbnormalitiesUtil.ID, value = [Dist.CLIENT])
 object EntityRenderersRegistry {
 	@SubscribeEvent
 	fun registry(event: EntityRenderersEvent.RegisterRenderers) {
