@@ -96,9 +96,7 @@ class ModEggItem(
 
 		val entityType = this.getType(stack)
 		val entity = entityType.spawn(level, stack, player, pos, MobSpawnType.SPAWN_EGG, false, false)
-		if (entity == null) {
-			return InteractionResultHolder.pass(stack)
-		}
+			?: return InteractionResultHolder.pass(stack)
 
 		if (entity is ISpawnByEgg) {
 			entity.onSpawnByEgg()
